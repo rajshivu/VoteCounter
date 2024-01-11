@@ -1,1 +1,24 @@
-hi
+The problem statement is a simple voting application that exposes a RESTful API for candidate management and vote casting. It utilizes the Spring Boot framework to facilitate rapid development and deployment. The key components include controllers for handling API endpoints, a service layer for business logic, and local variables for storing candidate information.
+
+Architecture Overview:
+#Spring Boot:
+ Chosen for its simplicity, convention-over-configuration, and rapid development capabilities.
+#Controller:
+ Handles incoming HTTP requests and delegates to the service layer.
+#Service:
+ Contains business logic for candidate management and vote counting.
+#Data Storage (Local Variables):
+ Utilizes local variables to store candidate information, avoiding the need for an external database.
+
+Features:
+#Enter Candidate:
+ Adds a new candidate with a vote count initialized to 0.
+#Cast Vote:
+ Increments the vote count for a specified candidate.
+ Ensures that the candidate is valid before updating the count.
+#Count Vote:
+ Retrieves and returns the latest vote count for a specified candidate.
+#List Votes:
+ Returns a JSON representation of all candidates along with their respective vote counts.
+#Get Winner:
+ Identifies and returns the candidate with the highest number of votes. If candidates having equal count of votes returns "tie".
