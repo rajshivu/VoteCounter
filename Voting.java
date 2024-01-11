@@ -72,5 +72,4 @@ public class Voting {
 	        return "No winner found.";
 	    }
 	}
-
 }
